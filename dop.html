@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="test.css">
+    <title>ПОДГОТОВКА К ТЕСТУ</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-text">тестНАИТ</div>
+            <div class="nav-buttons">
+                <a href="index.html"><button class="btn">Главная</button></a>
+                <a href="dop.html"><button class="btn">Подготовка к тесту</button></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="content">
+        <h1>📘 Справочник по основам Python 📘</h1>
+
+        <!-- Раздел 1: Переменные -->
+        <div class="section">
+            <h2>1. Переменные в Python: что это и как работают</h2>
+            <p>Переменная в Python — это именованная область памяти, предназначенная для хранения данных. Каждой переменной присваивается определенное значение, которое может изменяться в ходе выполнения программы. Проще говоря, переменная — это "контейнер" для данных.</p>
+            
+            <h3>Особенности переменных в Python:</h3>
+            <ul>
+                <li>Не требуют явного объявления типа (динамическая типизация)</li>
+                <li>Создаются в момент присваивания значения</li>
+                <li>Могут менять тип в ходе выполнения программы (хотя это не рекомендуется)</li>
+            </ul>
+            
+            <h3>Примеры создания переменных:</h3>
+            <div class="code-block">
+                <code>age = 25                    # Целое число</code>
+                <code>name = "Анна"              # Строка</code>
+                <code>temperature = 36.6         # Дробное число</code>
+                <code>is_student = True          # Логическое значение</code>
+            </div>
+        </div>
+
+        <!-- Раздел 2: Ввод-вывод -->
+        <div class="section">
+            <h2>2. Ввод и вывод данных: основные функции</h2>
+            
+            <h3>Функция input() — для ввода данных</h3>
+            <p>Функция <span class="highlight">input()</span> позволяет получать данные от пользователя через клавиатуру. <strong>Важно помнить:</strong> эта функция всегда возвращает данные в виде строки (тип <span class="highlight">str</span>), даже если пользователь вводит числа.</p>
+            
+            <h4>Синтаксис:</h4>
+            <div class="code-block">
+                <code>user_input = input("Подсказка для пользователя: ")</code>
+            </div>
+            
+            <h4>Пример с преобразованием типа:</h4>
+            <div class="code-block">
+                <code># Ввод числа с преобразованием</code>
+                <code>age = int(input("Сколько вам лет? "))  # Преобразуем строку в число</code>
+                <code>print(f"Через год вам будет {age + 1} лет")</code>
+            </div>
+            
+            <h3>Функция print() — для вывода данных</h3>
+            <p>Функция <span class="highlight">print()</span> выводит информацию на экран.</p>
+            
+            <h4>Примеры использования:</h4>
+            <div class="code-block">
+                <code>print("Привет, мир!")                    # Простой вывод текста</code>
+                <code>print("Имя:", name, "Возраст:", age)     # Вывод нескольких значений</code>
+                <code>print(f"Имя: {name}, Возраст: {age}")    # f-строки (форматированный вывод)</code>
+            </div>
+        </div>
+
+        <!-- Раздел 3: Циклы -->
+        <div class="section">
+            <h2>3. Циклы в Python: while и for</h2>
+            
+            <h3>Цикл while — выполняется пока условие истинно</h3>
+            <p>Цикл <span class="highlight">while</span> повторяет блок кода до тех пор, пока заданное условие остается истинным (равным <span class="highlight">True</span>).</p>
+            
+            <h4>Синтаксис:</h4>
+            <div class="code-block">
+                <code>while условие:</code>
+                <code class="indent"># Выполняемые действия</code>
+            </div>
+            
+            <h4>Пример:</h4>
+            <div class="code-block">
+                <code>count = 0</code>
+                <code>while count < 5:</code>
+                <code class="indent">print(f"Итерация номер {count}")</code>
+                <code class="indent">count += 1  # Увеличиваем счетчик, чтобы избежать бесконечного цикла</code>
+            </div>
+            
+            <div class="note">
+                <strong>Ключевые моменты:</strong> Условие проверяется перед каждой итерацией. Важно предусмотреть изменение условия, иначе цикл станет бесконечным.
+            </div>
+            
+            <h3>Цикл for — для перебора последовательностей</h3>
+            <p>Цикл <span class="highlight">for</span> используется для последовательного перебора элементов коллекции (списка, строки, кортежа и т.д.) или для выполнения фиксированного числа итераций.</p>
+            
+            <h4>Синтаксис:</h4>
+            <div class="code-block">
+                <code>for элемент in последовательность:</code>
+                <code class="indent"># Действия с элементом</code>
+            </div>
+            
+            <h4>Примеры:</h4>
+            <div class="code-block">
+                <code># Перебор списка</code>
+                <code>fruits = ["яблоко", "банан", "апельсин"]</code>
+                <code>for fruit in fruits:</code>
+                <code class="indent">print(fruit)</code>
+                <br>
+                <code># Перебор с range()</code>
+                <code>for i in range(3):  # 0, 1, 2</code>
+                <code class="indent">print(f"Шаг {i}")</code>
+            </div>
+            
+            <h4>Функция range():</h4>
+            <div class="code-block">
+                <code>range(5)           # 0, 1, 2, 3, 4</code>
+                <code>range(1, 6)        # 1, 2, 3, 4, 5</code>
+                <code>range(0, 10, 2)    # 0, 2, 4, 6, 8 (с шагом 2)</code>
+            </div>
+        </div>
+
+        <!-- Раздел 4: Функции -->
+        <div class="section">
+            <h2>4. Функции: определение и возврат значений</h2>
+            <p>Функция — это именованный блок кода, который выполняет определенную задачу и может быть вызван из других частей программы.</p>
+            
+            <h3>Определение функции:</h3>
+            <div class="code-block">
+                <code>def название_функции(параметры):</code>
+                <code class="indent"># Тело функции</code>
+                <code class="indent">return результат  # Необязательно</code>
+            </div>
+            
+            <h3>Что возвращает функция без return?</h3>
+            <p>Если в функции нет оператора <span class="highlight">return</span>, или если <span class="highlight">return</span> указан без значения, функция возвращает специальное значение <span class="highlight">None</span>. Это не то же самое, что 0 или пустая строка — <span class="highlight">None</span> означает "ничего", "отсутствие значения".</p>
+            
+            <h4>Пример:</h4>
+            <div class="code-block">
+                <code>def приветствие(имя):</code>
+                <code class="indent">print(f"Привет, {имя}!")</code>
+                <code class="indent"># Нет оператора return</code>
+                <br>
+                <code>результат = приветствие("Мария")  # Выведет: Привет, Мария!</code>
+                <code>print(результат)                 # Выведет: None</code>
+            </div>
+        </div>
+
+        <!-- Раздел 5: Списки -->
+        <div class="section">
+            <h2>5. Списки и основные методы работы с ними</h2>
+            <p>Список (list) — это изменяемая (mutable) упорядоченная коллекция элементов, которые могут быть разных типов.</p>
+            
+            <h3>Создание списков:</h3>
+            <div class="code-block">
+                <code># Пустой список</code>
+                <code>empty_list = []</code>
+                <br>
+                <code># Список с элементами</code>
+                <code>numbers = [1, 2, 3, 4, 5]</code>
+                <code>mixed = [1, "текст", 3.14, True]</code>
+                <code>nested = [[1, 2], [3, 4]]  # Список списков</code>
+            </div>
+            
+            <h3>Методы списков:</h3>
+            
+            <h4>1. append(x) — добавляет элемент x в конец списка</h4>
+            <div class="code-block">
+                <code>fruits = ["яблоко", "банан"]</code>
+                <code>fruits.append("апельсин")  # ["яблоко", "банан", "апельсин"]</code>
+            </div>
+            
+            <h4>2. insert(i, x) — вставляет элемент x на позицию i</h4>
+            <div class="code-block">
+                <code>fruits.insert(1, "груша")  # ["яблоко", "груша", "банан", "апельсин"]</code>
+            </div>
+            
+            <h4>3. pop(i) — удаляет и возвращает элемент по индексу i</h4>
+            <div class="code-block">
+                <code>last = fruits.pop()      # Удаляет последний элемент</code>
+                <code>second = fruits.pop(1)   # Удаляет элемент с индексом 1</code>
+            </div>
+            
+            <h4>4. remove(x) — удаляет первый элемент со значением x</h4>
+            <div class="code-block">
+                <code>fruits.remove("банан")  # Удаляет "банан"</code>
+            </div>
+            
+            <h4>5. Другие полезные методы:</h4>
+            <div class="code-block">
+                <code>fruits.sort()          # Сортировка по возрастанию</code>
+                <code>fruits.reverse()       # Разворот списка</code>
+                <code>fruits.count("яблоко") # Подсчет количества "яблоко"</code>
+                <code>fruits.index("груша")  # Индекс первого вхождения "груша"</code>
+            </div>
+        </div>
+
+        <!-- Раздел 6: Типы данных -->
+        <div class="section">
+            <h2>6. Типы данных в Python: изменяемые и неизменяемые</h2>
+            
+            <h3>Изменяемые (mutable) типы:</h3>
+            <ul>
+                <li><strong>Списки (list)</strong> — можно изменять, добавлять, удалять элементы</li>
+                <li><strong>Словари (dict)</strong> — можно изменять значения по ключам</li>
+                <li><strong>Множества (set)</strong> — можно добавлять и удалять элементы</li>
+            </ul>
+            
+            <h4>Пример изменяемости списка:</h4>
+            <div class="code-block">
+                <code>my_list = [1, 2, 3]</code>
+                <code>my_list[0] = 10  # Изменяем элемент</code>
+                <code>my_list.append(4)  # Добавляем элемент</code>
+                <code>print(my_list)  # [10, 2, 3, 4]</code>
+            </div>
+            
+            <h3>Неизменяемые (immutable) типы:</h3>
+            <ul>
+                <li><strong>Числа (int, float, complex)</strong> — нельзя изменить, можно только присвоить новое значение</li>
+                <li><strong>Строки (str)</strong> — нельзя изменить символы, можно создать новую строку</li>
+                <li><strong>Кортежи (tuple)</strong> — нельзя изменять после создания</li>
+                <li><strong>Булевы значения (bool)</strong> — True или False</li>
+            </ul>
+            
+            <h4>Пример с кортежем:</h4>
+            <div class="code-block">
+                <code>my_tuple = (1, 2, 3)</code>
+                <code># my_tuple[0] = 10  # ОШИБКА! Кортеж нельзя изменить</code>
+                <code>new_tuple = my_tuple + (4,)  # Создаем новый кортеж</code>
+                <code>print(new_tuple)  # (1, 2, 3, 4)</code>
+            </div>
+        </div>
+
+        <!-- Раздел 7: Операторы -->
+        <div class="section">
+            <h2>7. Операторы в Python: арифметические и логические</h2>
+            
+            <h3>Арифметические операторы:</h3>
+            <div class="code-block">
+                <code>5 + 3   # Сложение → 8</code>
+                <code>5 - 3   # Вычитание → 2</code>
+                <code>5 * 3   # Умножение → 15</code>
+                <code>5 / 2   # Деление → 2.5 (вещественное)</code>
+                <code>5 // 2  # Целочисленное деление → 2 (важно для теста!)</code>
+                <code>5 % 2   # Остаток от деления → 1</code>
+                <code>5 ** 2  # Возведение в степень → 25</code>
+            </div>
+            
+            <h3>Логические операторы:</h3>
+            <p>Используются для работы с логическими значениями (<span class="highlight">True</span> и <span class="highlight">False</span>):</p>
+            
+            <h4>1. and — логическое И (возвращает True, если оба операнда истинны)</h4>
+            <div class="code-block">
+                <code>True and True    # True</code>
+                <code>True and False   # False</code>
+            </div>
+            
+            <h4>2. or — логическое ИЛИ (возвращает True, если хотя бы один операнд истинен)</h4>
+            <div class="code-block">
+                <code>True or False    # True</code>
+                <code>False or False   # False</code>
+            </div>
+            
+            <h4>3. not — логическое НЕ (возвращает противоположное значение)</h4>
+            <div class="code-block">
+                <code>not True    # False</code>
+                <code>not False   # True</code>
+            </div>
+            
+            <h4>Примеры в условиях:</h4>
+            <div class="code-block">
+                <code>age = 25</code>
+                <code>is_student = True</code>
+                <br>
+                <code>if age >= 18 and is_student:</code>
+                <code class="indent">print("Совершеннолетний студент")</code>
+                <br>
+                <code>if age < 18 or not is_student:</code>
+                <code class="indent">print("Или несовершеннолетний, или не студент")</code>
+            </div>
+        </div>
+
+        <!-- Раздел 8: Встроенные функции -->
+        <div class="section">
+            <h2>8. Встроенные функции для работы с числами</h2>
+            <p>Python предоставляет множество встроенных функций для работы с числами:</p>
+            
+            <h3>1. abs(x) — возвращает абсолютное значение (модуль) числа</h3>
+            <div class="code-block">
+                <code>abs(-5)    # 5</code>
+                <code>abs(3.14)  # 3.14</code>
+            </div>
+            
+            <h3>2. max(iterable) — возвращает максимальный элемент</h3>
+            <div class="code-block">
+                <code>max([1, 5, 3])    # 5</code>
+                <code>max(4, 2, 9)      # 9</code>
+            </div>
+            
+            <h3>3. min(iterable) — возвращает минимальный элемент</h3>
+            <div class="code-block">
+                <code>min([1, 5, 3])    # 1</code>
+                <code>min(4, 2, 9)      # 2</code>
+            </div>
+            
+            <h3>4. round(x, n) — округление числа x до n знаков после запятой</h3>
+            <div class="code-block">
+                <code>round(3.14159, 2)  # 3.14</code>
+            </div>
+            
+            <h3>5. sum(iterable) — сумма элементов</h3>
+            <div class="code-block">
+                <code>sum([1, 2, 3, 4])  # 10</code>
+            </div>
+            
+            <div class="note">
+                <strong>Важно:</strong> <span class="highlight">len()</span> — это функция для определения длины последовательности (строки, списка, кортежа), а не только для чисел.
+            </div>
+        </div>
+
+        <!-- Раздел 9: Модули -->
+        <div class="section">
+            <h2>9. Модули в Python: импорт и использование</h2>
+            <p>Модуль — это файл с расширением .py, содержащий код на Python (функции, классы, переменные).</p>
+            
+            <h3>Способы импорта:</h3>
+            
+            <h4>1. Импорт всего модуля:</h4>
+            <div class="code-block">
+                <code>import math</code>
+                <code>result = math.sqrt(16)  # 4.0</code>
+            </div>
+            
+            <h4>2. Импорт конкретных функций:</h4>
+            <div class="code-block">
+                <code>from math import sqrt, pi</code>
+                <code>result = sqrt(25)  # 5.0</code>
+                <code>print(pi)          # 3.141592653589793</code>
+            </div>
+            
+            <h4>3. Импорт с псевдонимом:</h4>
+            <div class="code-block">
+                <code>import math as m</code>
+                <code>result = m.sqrt(9)  # 3.0</code>
+            </div>
+            
+            <h3>Популярные модули:</h3>
+            <ul>
+                <li><strong>random</strong> — генерация случайных чисел</li>
+                <li><strong>math</strong> — математические функции</li>
+                <li><strong>datetime</strong> — работа с датой и временем</li>
+            </ul>
+            
+            <div class="code-block">
+                <code>import random</code>
+                <code>random.randint(1, 10)  # Случайное целое от 1 до 10</code>
+            </div>
+            
+            <h3>Важные моменты:</h3>
+            <ul>
+                <li>Модули стандартной библиотеки Python не требуют установки через <span class="highlight">pip</span></li>
+                <li>Сторонние модули устанавливаются через <span class="highlight">pip install имя_модуля</span></li>
+                <li>После импорта можно использовать все функции модуля (если они не приватные)</li>
+            </ul>
+        </div>
+
+        <!-- Раздел 10: Работа с файлами -->
+        <div class="section">
+            <h2>10. Работа с файлами: открытие, чтение, запись</h2>
+            
+            <h3>Открытие файла: функция open()</h3>
+            <div class="code-block">
+                <code>file = open("example.txt", "r")  # Открыть для чтения</code>
+            </div>
+            
+            <h3>Режимы работы с файлами:</h3>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Режим</th>
+                        <th>Описание</th>
+                    </tr>
+                    <tr>
+                        <td><code>'r'</code></td>
+                        <td>Чтение (по умолчанию)</td>
+                    </tr>
+                    <tr>
+                        <td><code>'w'</code></td>
+                        <td>Запись (перезаписывает файл)</td>
+                    </tr>
+                    <tr>
+                        <td><code>'a'</code></td>
+                        <td>Добавление в конец файла</td>
+                    </tr>
+                    <tr>
+                        <td><code>'x'</code></td>
+                        <td>Создание нового файла (ошибка, если файл существует)</td>
+                    </tr>
+                    <tr>
+                        <td><code>'b'</code></td>
+                        <td>Бинарный режим (например, 'rb', 'wb')</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h3>Методы работы с файлами:</h3>
+            <div class="code-block">
+                <code># Чтение файла</code>
+                <code>content = file.read()       # Читает весь файл</code>
+                <code>line = file.readline()      # Читает одну строку</code>
+                <code>lines = file.readlines()    # Читает все строки в список</code>
+                <br>
+                <code># Запись в файл</code>
+                <code>file.write("Текст\n")       # Записывает строку</code>
+                <code>file.writelines(["Строка 1\n", "Строка 2\n"])  # Записывает список строк</code>
+            </div>
+            
+            <h3>Важность закрытия файлов:</h3>
+            <p>Файлы нужно закрывать после работы, чтобы освободить ресурсы:</p>
+            
+            <h4>1. Явное закрытие:</h4>
+            <div class="code-block">
+                <code>file = open("example.txt", "r")</code>
+                <code>content = file.read()</code>
+                <code>file.close()  # Важно!</code>
+            </div>
+            
+            <h4>2. Использование контекстного менеджера (рекомендуется):</h4>
+            <div class="code-block">
+                <code>with open("example.txt", "r") as file:</code>
+                <code class="indent">content = file.read()</code>
+                <code># Файл закрывается автоматически при выходе из блока with</code>
+            </div>
+            
+            <div class="note">
+                <strong>Внимание на тест:</strong> Режим <span class="highlight">'w'</span> полностью перезаписывает файл, а не добавляет в него!
+            </div>
+        </div>
+
+        <!-- Раздел 11: Генерация списков -->
+        <div class="section">
+            <h2>11. Генерация списков (list comprehensions)</h2>
+            <p>List comprehension — это компактный способ создания списков в Python.</p>
+            
+            <h3>Базовый синтаксис:</h3>
+            <div class="code-block">
+                <code>[выражение for элемент in последовательность if условие]</code>
+            </div>
+            
+            <h3>Примеры:</h3>
+            <div class="code-block">
+                <code># Квадраты чисел от 0 до 9</code>
+                <code>squares = [x**2 for x in range(10)]</code>
+                <code># [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</code>
+                <br>
+                <code># Только четные квадраты</code>
+                <code>even_squares = [x**2 for x in range(10) if x % 2 == 0]</code>
+                <code># [0, 4, 16, 36, 64]</code>
+                <br>
+                <code># Преобразование строк</code>
+                <code>words = ["hello", "world", "python"]</code>
+                <code>uppercase = [word.upper() for word in words]</code>
+                <code># ["HELLO", "WORLD", "PYTHON"]</code>
+            </div>
+            
+            <h3>Преимущества:</h3>
+            <ul>
+                <li>Более читаемый код</li>
+                <li>Часто работает быстрее обычных циклов</li>
+                <li>Компактная запись</li>
+            </ul>
+        </div>
+
+        <!-- Раздел 12: Проверка типов -->
+        <div class="section">
+            <h2>12. Проверка типов данных: функция type()</h2>
+            <p>Функция <span class="highlight">type()</span> возвращает тип переданного ей объекта.</p>
+            
+            <h3>Примеры:</h3>
+            <div class="code-block">
+                <code>print(type(5))        # &lt;class 'int'&gt;</code>
+                <code>print(type(5.0))      # &lt;class 'float'&gt; (важно для теста!)</code>
+                <code>print(type("текст"))  # &lt;class 'str'&gt;</code>
+                <code>print(type(True))     # &lt;class 'bool'&gt;</code>
+                <code>print(type([1, 2]))   # &lt;class 'list'&gt;</code>
+                <code>print(type((1, 2)))   # &lt;class 'tuple'&gt;</code>
+            </div>
+            
+            <h3>Практическое применение:</h3>
+            <div class="code-block">
+                <code>value = input("Введите число: ")</code>
+                <br>
+                <code>if type(value) == str:</code>
+                <code class="indent">print("Это строка, преобразуем в число...")</code>
+                <code class="indent">number = int(value)</code>
+                <code class="indent">print(f"Теперь это число: {type(number)}")</code>
+            </div>
+        </div>
+
+        <!-- Раздел 13: Кортежи -->
+        <div class="section">
+            <h2>13. Кортежи (tuple): неизменяемые последовательности</h2>
+            <p>Кортеж — это неизменяемая (immutable) упорядоченная последовательность элементов.</p>
+            
+            <h3>Создание кортежей:</h3>
+            <div class="code-block">
+                <code># Пустой кортеж</code>
+                <code>empty_tuple = ()</code>
+                <br>
+                <code># Кортеж с одним элементом (нужна запятая!)</code>
+                <code>single = (5,)  # Важно: (5) - это не кортеж, а число в скобках!</code>
+                <br>
+                <code># Кортеж из нескольких элементов</code>
+                <code>coordinates = (10, 20)</code>
+                <code>colors = ("красный", "зеленый", "синий")</code>
+                <br>
+                <code># Без скобок (кортеж упаковка)</code>
+                <code>numbers = 1, 2, 3  # (1, 2, 3)</code>
+            </div>
+            
+            <h3>Особенности кортежей:</h3>
+            <ol>
+                <li><strong>Неизменяемость</strong> — нельзя изменить после создания</li>
+                <li><strong>Быстрее списков</strong> — занимают меньше памяти, работают быстрее</li>
+                <li><strong>Используются как ключи словарей</strong> (в отличие от списков)</li>
+                <li><strong>Могут содержать разные типы данных</strong></li>
+            </ol>
+            
+            <h3>Операции с кортежами:</h3>
+            <div class="code-block">
+                <code># Доступ к элементам</code>
+                <code>colors = ("красный", "зеленый", "синий")</code>
+                <code>print(colors[0])   # красный</code>
+                <code>print(colors[-1])  # синий (последний)</code>
+                <br>
+                <code># Срезы</code>
+                <code>print(colors[1:])  # ("зеленый", "синий")</code>
+                <br>
+                <code># Конкатенация (создание нового кортежа)</code>
+                <code>mixed = colors + ("желтый",)  # ("красный", "зеленый", "синий", "желтый")</code>
+                <br>
+                <code># Длина кортежа</code>
+                <code>print(len(colors))  # 3</code>
+                <br>
+                <code># Проверка вхождения</code>
+                <code>print("красный" in colors)  # True</code>
+            </div>
+            
+            <h3>Когда использовать кортежи:</h3>
+            <ul>
+                <li>Когда нужна неизменяемая последовательность</li>
+                <li>Для возврата нескольких значений из функции</li>
+                <li>Как ключи в словарях</li>
+                <li>Когда порядок элементов важен, но менять их не нужно</li>
+            </ul>
+            
+            <h4>Пример возврата нескольких значений:</h4>
+            <div class="code-block">
+                <code>def get_user_info():</code>
+                <code class="indent">name = "Анна"</code>
+                <code class="indent">age = 25</code>
+                <code class="indent">city = "Москва"</code>
+                <code class="indent">return name, age, city  # Возвращает кортеж</code>
+                <br>
+                <code>user_info = get_user_info()  # ("Анна", 25, "Москва")</code>
+            </div>
+        </div>
+
+        <!-- Краткий итог -->
+        <div class="summary">
+            <h2>Краткий итог для запоминания перед тестом:</h2>
+            <ol>
+                <li><strong>Переменные</strong> — именованные контейнеры для данных</li>
+                <li><strong>input()</strong> всегда возвращает строку (<code>str</code>)</li>
+                <li><strong>while</strong> — цикл по условию, <strong>for</strong> — по последовательности</li>
+                <li>Функция без <code>return</code> возвращает <strong>None</strong></li>
+                <li><strong>append()</strong> добавляет элемент в конец списка</li>
+                <li><strong>int</strong> — целые числа, <strong>float</strong> — дробные</li>
+                <li><strong>Списки изменяемы</strong>, <strong>кортежи неизменяемы</strong></li>
+                <li>Логические операторы: <strong>and</strong>, <strong>or</strong>, <strong>not</strong></li>
+                <li>Функции для чисел: <strong>abs()</strong>, <strong>max()</strong>, <strong>min()</strong></li>
+                <li><strong>//</strong> — целочисленное деление</li>
+                <li>Модули импортируются через <strong>import</strong></li>
+                <li>Файлы открываются через <strong>open()</strong>, режимы: 'r' (чтение), 'w' (запись)</li>
+                <li><strong>type(5.0)</strong> вернет <code>&lt;class 'float'&gt;</code></li>
+                <li>Неизменяемая последовательность — <strong>кортеж (tuple)</strong></li>
+            </ol>
+        </div>
+
+    </div>
+
+     <footer style="font-family: serif;">тестНАИТ 2025</footer>
+</body>
+</html>
