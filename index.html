@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="test.css">
+	<title>Тест ПО ОСНОВАМ PYTHON</title>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="logo-text">тестНАИТ</div>
+			<div class="nav-buttons">
+				<a href="index.html"><button class="btn">Главная</button></a>
+				<a href="dop.html"><button class="btn">Подготовка к тесту</button></a>
+			</div>
+		</div>
+	</header>
+	<style></style>
+	<div class="main-content">
+		<h1>Тест по "Основам Python"</h1>
+		<p>Привет! Готов начать тест?) Если да, то жмякай на кнопку "Начать тестирование" <b>Желаю удачи!</b></p>
+    <p>Если захотите выйти из теста нажмите "отмена"</p>
+		<a data-modal="modal" class="open-modal-btn">Начать тестирование</a>
+	</div>
+  <div class="result" id="result">ЗДЕСЬ БУДЕТ РЕЗУЛЬТАТ</div>
+  <footer style="font-family: serif;">тестНАИТ 2025</footer>
+<script>
+  // Открытие модального окна при клике на кнопку
+document.querySelectorAll('.open-modal-btn').forEach(button => {
+  button.addEventListener('click', 
+    function() {
+    const modalId = this.getAttribute('data-modal');
+    const modal = document.getElementById(modalId);
+    
+    var rez = 0;
+    var vibor = confirm("Вы точно готовы начать? В тесте 15 вопросов"); 
+
+    if (vibor) {
+      function askQuestion(questionText, correctAnswer) {
+        let answer;
+        do {
+          answer = prompt(questionText);
+          
+          if (answer.trim() === "") {
+            alert("Вы ничего не ввели, введите пожалуйста ответ");
+          }
+        } while (answer.trim() === "");
+        
+        
+        if (Number(answer) === correctAnswer) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      // Вопрос 1
+      const q1Result=askQuestion("1) Что представляет собой переменная в Python? (Один вариант ответа)\n\n 1)Функция для выполнения операций\n 2)Именованная область памяти для хранения данных\n 3)Цикл для повторения кода\n 4)Модуль для импорта библиотек", 2);
+      if (q1Result==="cancel") {
+      } else if (q1Result) {
+        rez++;
+      } else {
+        console.log("Неправильный ответ (Верный ответ: Именованная область памяти для хранения данных)");
+      }
+
+      // Вопрос 2
+      const q2Result=askQuestion("2) Какой оператор используется для ввода данных с клавиатуры в Python? (Один вариант ответа)\n\n 1)print()\n 2)input()\n 3)return\n 4)import", 2);
+      if (q2Result==="cancel") {
+      } else if (q2Result) {
+        rez++;
+      } else {
+        console.log("Неправильный ответ (Верный ответ: input)");
+      }
+
+      // Вопрос 3
+      const q3Result=askQuestion("3) Какой цикл в Python выполняется, пока условие истинно? (Один вариант ответа)\n\n 1)for\n 2)if\n 3)match\n 4)while", 4);
+      if (q3Result==="cancel") {
+
+      } else if (q3Result) {
+        rez++;
+      } else {
+        console.log("Неправильный ответ (Верный ответ: while)");
+      }
+
+      // Вопрос 4
+      const q4Result=askQuestion("4) Что возвращает функция по умолчанию, если в ней нет оператора return? (Один вариант ответа)\n\n 1)0\n 2)None\n 3)Пустую строку\n 4)Ошибку\n", 2);
+      if (q4Result==="cancel") {
+      } else if (q4Result) {
+        rez++;
+      } else {
+        console.log("Неправильный ответ (Верный ответ: None)");
+      }
+
+      // Вопрос 5
+      const q5Result=askQuestion("5) Какой метод используется для добавления элемента в конец списка в Python?\n\n 1)append()\n 2)remove()\n 3)insert()\n 4)pop()", 1);
+      if (q5Result==="cancel") {
+      } else if (q5Result) {
+        rez++;
+      } else {
+        console.log("Неправильный ответ (Верный ответ: append)");
+      }
+
+      // Вопрос 6
+      const q6Result=askQuestion("6) Какие из следующих утверждений верны относительно типов данных в Python? (Вводить слитно, без запятых и пробелов)\n\n 1)Целые числа относятся к типу int\n 2)Строки могут быть изменяемыми\n 3)Списки являются mutable (изменяемыми)\n 4)Кортежи являются immutable (неизменяемыми)", 134);
+      if (q6Result==="cancel") {
+      } else if (q6Result) {
+        rez++;
+      } else {
+        console.log("Неправильный ответ (Верный ответ: 134)");
+      }
+
+      // Вопрос 7
+      const q7Result=askQuestion("7) Какие операторы используются для логических выражений в Python? (Вводить слитно, без запятых и пробелов)\n\n 1)and\n 2)or\n 3)not\n 4)if", 123);
+      if (q7Result==="cancel") {
+      } else if (q7Result) {
+        rez++;
+      } else {
+        console.log("Неправильный ответ (Верный ответ: 123)");
+      }
+
+      // Вопрос 8
+      const q8Result=askQuestion("8) Какие встроенные функции Python относятся к работе с числами? (Вводить слитно, без запятых и пробелов)\n\n 1)abs()\n 2)len()\n 3)max()\n 4)min()", 134);
+      if (q8Result==="cancel") {
+      } else if (q8Result) {
+        rez++;
+      } else {
+        console.log("Неправильный ответ (Верный ответ: 134)");
+      }
+
+      // Вопрос 9
+      const q9Result=askQuestion("9) Что верно относительно модулей в Python? (Вводить слитно, без запятых и пробелов)\n\n 1)Модули импортируются с помощью import\n 2)random — модуль для генерации случайных чисел\n 3)Модули всегда требуют установки через pip\n 4)Функции из модуля можно вызывать после импорта", 124);
+      if (q9Result==="cancel") {
+      } else if (q9Result) {
+        rez++;
+      } else {
+        console.log("Неправильный ответ (Верный ответ: 124)");
+      }
+
+      // Вопрос 10
+      const q10Result=askQuestion("10) Какие утверждения верны для списков в Python? (Вводить слитно, без запятых и пробелов)\n\n 1)Списки создаются с помощью квадратных скобок []\n 2)Элементы списка могут быть разных типов\n 3) Списки можно генерировать с помощью list comprehensions\n 4)Списки неизменяемы", 123);
+      if (q10Result==="cancel") {
+      } else if (q10Result) {
+        rez++;
+      } else {
+        console.log("Неправильный ответ (Верный ответ: 123)");
+      }
+
+      // Вопрос 11
+      const q11Result=askQuestion("11) Что верно относительно работы с файлами в Python? (Вводить слитно, без запятых и пробелов)\n\n 1)Файлы открываются с помощью open()\n 2)Режим 'r' предназначен для чтения\n 3) Режим 'w' предназначен для записи с перезаписью\n 4)Файлы закрываются автоматически без close()", 123);
+      if (q11Result==="cancel") {
+      } else if (q11Result) {
+        rez++;
+      } else {
+        console.log("Неправильный ответ (Верный ответ: 123)");
+      }
+
+     // Вопрос 12
+      let z12;
+      do {
+        z12=prompt("12) Какой тип данных возвращает функция input() в Python?");
+        if (z12===null) {
+          break;
+        }
+        if (z12.trim()==="") {
+          alert("Вы ничего не ввели, введите пожалуйста ответ");
+        }
+      } while (z12.trim()==="");
+      
+      if (z12!==null&&z12.trim()!=="") {
+        const answer=z12.toLowerCase().trim();
+        if (answer==="str"||answer==="строка") {
+          rez++;
+        } else {
+          console.log("Неправильный ответ (Верный ответ: строка или str)");
+        }
+      }
+
+      // Вопрос 13
+      let z13;
+      do {
+        z13=prompt("13) Что выведет на экран выражение print(type(5.0))?");
+        if (z13===null) {
+          break;
+        }
+        if (z13.trim()==="") {
+          alert("Вы ничего не ввели, введите пожалуйста ответ");
+        }
+      } while (z13.trim()==="");
+      
+      if (z13!==null&&z13.trim()!=="") {
+        const answer=z13.toLowerCase().trim();
+        if (answer==="<class 'float'>") {
+          rez++;
+        } else {
+          console.log("Неправильный ответ (Верный ответ: <class 'float'>)");
+        }
+      }
+
+      // Вопрос 14
+      let z14;
+      do {
+        z14=prompt("14) Какой оператор используется для целочисленного деления в Python (например, 7 // 3)?");
+        if (z14===null) {
+          break;
+        }
+        if (z14.trim()==="") {
+          alert("Вы ничего не ввели, введите пожалуйста ответ");
+        }
+      } while (z14.trim()==="");
+      
+      if (z14!==null&&z14.trim()!=="") {
+        const answer=z14.toLowerCase().trim();
+        if (answer==="//") {
+          rez++;
+        } else {
+          console.log("Неправильный ответ (Верный ответ: //)");
+        }
+      }
+
+      // Вопрос 15
+      let z15;
+      do {
+        z15=prompt("15) Как называется структура данных в Python, которая является неизменяемой последовательностью элементов?");
+        if (z15===null) {
+          break;
+        }
+        if (z15.trim()==="") {
+          alert("Вы ничего не ввели, введите пожалуйста ответ");
+        }
+      } while (z15.trim()==="");
+      
+      if (z15!==null&&z15.trim()!=="") {
+        const answer=z15.toLowerCase().trim();
+        if (answer==="кортеж"||answer==="tuple") {
+          rez++;
+        } else {
+          console.log("Неправильный ответ (Верный ответ: кортеж (или tuple))");
+        }
+      }
+      const resultElement = document.getElementById('result');
+      let message = "";
+      switch (rez) {
+        case 1:
+          message = "Ты выполнил(a) " + rez + " задание правильно из 15";
+          break;
+        case 2:
+        case 3:
+        case 4:
+          message = "Ты выполнил(a) " + rez + " задания правильно из 15";
+          break;
+        case 5:
+        case 6:
+        case 7:
+        case 8:
+        case 9:
+        case 10:
+        case 11:
+        case 12:
+        case 13:
+        case 14:
+        case 15:
+          message = "Ты выполнил(a) " + rez + " заданий правильно из 15";
+          break;
+        default:
+          message = "Ты не выполнил(a) ни одного задания правильно";
+      }
+
+      if (resultElement) {
+        resultElement.textContent = message;
+      }
+    }
+  })
+});
+</script>
+</script>
+</script>
+</body>
+</html>
